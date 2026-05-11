@@ -48,7 +48,7 @@ body{
     word-wrap:break-word;
     color:var(--linecolor);
     font-family:'Tahoma';
-    font-size:1vw;
+    font-size:1.5vw;
     overflow-y:scroll;
 }
 
