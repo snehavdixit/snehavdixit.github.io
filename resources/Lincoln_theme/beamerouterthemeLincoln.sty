@@ -1,0 +1,34 @@
+% Sneha Vireshwar Dixit, <sdixit2@huskers.unl.edu> July 2023
+
+\mode<presentation>
+
+\RequirePackage{appendixnumberbeamer} % Don't number appendix frames.
+    
+\defbeamertemplate*{footline}{Lincoln}{
+    \ifnum\value{framenumber}>1
+    \makebox[0pt][l]{\ \ \ \usebeamerfont{footer}{\insertframenumber}\hspace{0.2em}/
+    \usebeamerfont{footer}{\insertshortauthor}}\hfill\hspace{0.5em}\vspace{0.25em}
+    \fi}
+
+\defbeamertemplate*{headline}{Lincoln}{
+  \dimen0=\paperwidth
+  \multiply\dimen0 by \insertframenumber
+  \divide\dimen0 by \inserttotalframenumber
+  \edef\progressbarwidth{\the\dimen0}
+
+  \leavevmode
+  \ifnum\value{framenumber}>1
+  \vbox{
+      \begin{beamercolorbox}[wd=\progressbarwidth,ht=0.01pt,dp=0.6ex]{accent palette}
+      \end{beamercolorbox}
+  }
+  \fi
+}
+
+
+\defbeamertemplate*{navigation symbols}{Lincoln}{}
+
+
+
+\mode
+<all>

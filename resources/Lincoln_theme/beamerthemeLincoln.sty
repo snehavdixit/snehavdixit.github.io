@@ -1,0 +1,28 @@
+% Sneha Vireshwar Dixit <sdixit2@huskers.unl.edu>, July 2023
+
+\mode<presentation>
+
+\usefonttheme{Lincoln}
+\usecolortheme{Lincoln}
+\useinnertheme{Lincoln}
+\useoutertheme{Lincoln}
+
+\titlegraphic{\includegraphics[height=3em]{Nebraska_N_rev.png}}
+
+\logo{\vspace{-2.75em}\hspace{-8.0 em}\includegraphics[height=2em]{Nebraska_N_RGB.png}}
+%FONT FIX PLZZ!
+%\setsansfont{Barlow Medium}		
+
+%This custom command allows the number of frames to be stopped at this point
+\newcommand{\beginappendix}{
+    \newcounter{framenumberappendix}
+    \setcounter{framenumberappendix}{\value{framenumber}}
+}
+
+\newcommand{\finishappendix}{
+    \addtocounter{framenumberappendix}{-\value{framenumber}}
+    \addtocounter{framenumber}{\value{framenumberappendix}} 
+}
+
+\mode
+<all>

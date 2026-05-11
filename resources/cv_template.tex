@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{array}
+\usepackage[left=0.7in,right=0.7in,bottom=0.6in,top=0.75in,
+footskip=-0.2in]{geometry}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{paralist} 
+\usepackage{program}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\titleformat*{\section}{\fontsize{14}{20}\bfseries}
+\titleformat*{\subsection}{\fontsize{12}{16}\selectfont}
+\titlespacing*{\section}
+{0pt}{15pt}{5pt}
+\titlespacing*{\subsection}
+{0pt}{15pt}{3pt}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} 
+\setlength{\parindent}{0pt}
+\setlength{\headsep}{15pt}
+\allowdisplaybreaks
+\setlist[itemize]{leftmargin=20pt}
+\setlist{nosep}
+\setlist[itemize,1]{label=\raisebox{0.25ex}{\tiny$\bullet$}}
+\renewcommand{\familydefault}{\sfdefault}
+\fancyfoot[L]{\footnotesize{Last updated : Month Year}}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\fancyhead[L]{\footnotesize{Full Name} $\lvert$ {email@institution.edu} }
+\fancypagestyle{plain}{
+     \fancyhead{}
+\renewcommand{\headrulewidth}{0pt}}
+
+\begin{document}
+\thispagestyle{plain}
+ \section*{Full Name}
+ email@institution.edu
+ \section*{Education}
+\subsection*{Most Recent Degree and Institution \hfill Start Date - End Date/Present}
+\begin{description}
+    \item Notable achievement
+\end{description}
+\vspace*{-10pt}
+\subsection*{Less Recent Degree and Institution (reverse chronological) \hspace*{\fill}Start Date - End Date}
+\begin{description}
+    \item Notable Achievement
+\end{description}
+
+
+\section*{Experience}
+\subsection*{Most Recent Project $\lvert$ Institution \hfill Start Date - End Date/Present}
+\begin{description}
+    \item Award if any 
+\end{description}
+    \begin{itemize}
+        \item Achievement
+        \item Achievement
+    \end{itemize}
+
+\subsection*{Less Recent Project $\lvert$ Institution \hfill Start Date - End Date}
+\begin{description}
+    \item Award if any 
+\end{description}
+    \begin{itemize}
+        \item Achievement
+        \item Achievement
+    \end{itemize}
+
+\subsection*{Least Recent Project $\lvert$ Institution \hfill Start Date - End Date}
+\begin{description}
+    \item Award if any 
+\end{description}
+    \begin{itemize}
+        \item Achievement
+        \item Achievement
+    \end{itemize}
+  
+\section*{Skills}
+\begin{description}
+    \item[]Category :  List of Skills.
+\end{description}
+
+\section*{Less Relevant Experience}
+\subsection*{Most Recent Project $\lvert$ Institution \hfill Start Date - End Date/Present}
+\begin{description}
+    \item Award if any 
+\end{description}
+    \begin{itemize}
+        \item Achievement
+        \item Achievement
+    \end{itemize}
+
+\subsection*{Less Recent Project $\lvert$ Institution \hfill Start Date - End Date}
+\begin{description}
+    \item Award if any 
+\end{description}
+    \begin{itemize}
+        \item Achievement
+        \item Achievement
+    \end{itemize}
+\end{document}

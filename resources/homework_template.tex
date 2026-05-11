@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{array}
+\usepackage[margin=1in]{geometry}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{paralist} 
+\usepackage{program}
+\usepackage{fancyhdr}
+\setlength{\parindent}{0pt}
+%These are all packages I have found useful over the years.  I must admit, I don't remember why some of them are there.  For your ease, I suggest choosing the option to download packages on the fly as needed when installing your TeX compiler.
+\setcounter{MaxMatrixCols}{20}
+\pagestyle{fancy}
+\allowdisplaybreaks
+
+\thispagestyle{fancy}
+
+\fancyhf{}
+\fancyhead[L]{\textbf{Sneha Vireshwar Dixit}}
+\fancyhead[C]{\textbf{PHY 324 (E\&M) HW 5}}
+\fancyhead[R]{\textbf{April 2023}}
+
+\begin{document}
+\subsection*{Question 1}
+The divergence of magnetic vector potential, \textbf{A}, is set to zero for convenience's sake. This allows us to formulate an equation similar to Poisson's equation for magnetostatics as well, and lets us find the magnetic field using magnetic vector potential easily. Mathematically, this is possible because we can add \textbf{A} to a function whose curl vanishes and whose divergence is equal to $-\nabla$\textbf{A} without leaving any effect on \textbf{B}.
+
+\bigskip
+\subsection*{Question 2}
+A physical dipole is made of two equal and opposite charges $\pm q$ separated by a distance \textbf{d}. However, an ideal dipole occurs in the limit where $q\longrightarrow\infty$ and $\textbf{b}\longrightarrow0$ while holding the product $q\textbf{d} = \textbf{p}$ constant. Moreover, the potential due to a physical dipole is only approximately equal to the potential predicted by $V = \frac{\textbf{p}\cdot \hat{\textbf{r}}}{4\pi\epsilon_0 r^2}$.
+
+\bigskip
+\subsection*{Problem 5.23}
+Let our finite wire lie along the $z$ axis between $z_1$ and $z_2$. Then, measuring length in the same direction as current flow, we have for a point at perpendicular distance $s$ from the wire :
+\begin{align*}
+   \textbf{A} &= \int\frac{\mu_0I}{4\pi r}dl\hat{\textbf{z}} = \int\frac{\mu_0I}{4\pi \sqrt{z^2 + s^2}}dz \hat{\textbf{z}}  \\
+   &= \frac{\mu_0I}{4\pi}\left[\ln{\left(z + \sqrt{z^2 + s^2}\right)}\right]_{z_1}^{z_2}\hat{\textbf{z}}\\
+   &= \frac{\mu_0I}{4\pi}\ln\left(\frac{z_2 + \sqrt{z_2^2 + s^2}}{z_1 +\sqrt{z_1^2 + s^2}}\right)\hat{\textbf{z}}
+\end{align*}
+\bigskip
+Equation 5.37 predicts the \textbf{B} field due to a line segment. Now, $\textbf{B} = \nabla \times \textbf{A}$. \textbf{A} only a $\hat{\textbf{z}}$ component. In cylindrical coordinates :
+\begin{align*}
+    \nabla \times \textbf{A} &= -\frac{\partial \textbf{A}_z}{\partial s }\hat{\phi}\\
+    &= -\frac{\mu_0I}{4\pi}\left(\frac{z_1 + \sqrt{z_1^2 + s^2}}{z_2 + \sqrt{z_2^2 + s^2}}\right)\left(\frac{s}{\sqrt{z_2^2 + s^2}(z_1 + \sqrt{z_1^2+s^2})} - \frac{s(z_2+\sqrt{z_2^2+s^2})}{\sqrt{z_1^2 + s^2}(z_1 + \sqrt{z_1^1 + s^2})^2}\right)\hat{\phi}\\
+    &= -\frac{\mu_0I}{4\pi}\left( \frac{s}{\sqrt{z_2^2 + s^2}(z_2+\sqrt{z_2^2+s^2})} - \frac{s}{\sqrt{z_1^2+s^2}(z_1+\sqrt{z_1^2+s^2})}\right)\hat{\phi}\\
+    &= -\frac{\mu_0Is}{4\pi}\left(\frac{z_2 - \sqrt{z_2^2+s^2}}{(z_2 +\sqrt{z_2^2 + s^2} )(z_2 - \sqrt{z_2^2 + s^2})\sqrt{z_2^2+s^2}} - \frac{z_1 - \sqrt{z_1^2+s^2}}{(z_1 +\sqrt{z_1^2 + s^2} )(z_1 - \sqrt{z_1^2 + s^2})\sqrt{z_1^2+s^2}}\right)\hat{\phi}\\
+    &= -\frac{\mu_0Is}{4\pi}\left(\frac{z_2 - \sqrt{z_2^2+s^2}}{(z_2^2 - z_2^2 - s^2)\sqrt{z_2^2+s^2}} - \frac{z_1 - \sqrt{z_1^2+s^2}}{(z_1^2 - z_1^2 - s^2)\sqrt{z_1^2+s^2}} \right)\hat{\phi}\\
+    &= \frac{\mu_0I}{4\pi s}\left(\frac{z_2 - \sqrt{z_2^2 + s^2}}{\sqrt{z_2^2 + s^2}} - \frac{z_1 - \sqrt{z_1^2 + s^2}}{\sqrt{z_1^2 + s^2}}\right)\hat{\phi}\\
+    &= \frac{\mu_0I}{4\pi s}\left(\frac{z_2}{\sqrt{z_2^2 + s^2}} - \frac{z_1}{\sqrt{z_1^2 + s^2}} \right)\hat{\phi}
+\end{align*}
+Now, by equation 5.37, $\textbf{B} = \frac{\mu_0I}{4\pi s}(\sin\theta_2 - \sin\theta_1)\hat{\phi}$. We have $\sin\theta_2 = \frac{z_2}{\sqrt{z_2^2 + s^2}}$ and $\sin\theta_1 = \frac{z_1}{\sqrt{z_1^2 + s^2}}$. Our result agrees with equation 5.37. (Sorry for the lack of figure, my laptop is broken).
+
+\bigskip
+
+\subsection*{Problem 3.31}
+Example 3.10 describes a dipole with charge $\pm q$ and separation $\textbf{d}$. Let $r' = \frac{d}{2}$. Then, by equation 3.94, we have :
+\begin{align*}
+    \frac{1}{r_+} &= \frac{1}{R}\sum_{n=0}^{\infty}\left(\frac{d}{2R} \right)^n P_n (\cos\alpha)\\
+\end{align*}
+For $r_-$, let $\alpha \longrightarrow \pi + \alpha$ and so we have :
+\begin{align*}
+    \frac{1}{r_-} &= \frac{1}{R}\sum_{n=0}^{\infty}\left(\frac{d}{2R} \right)^n P_n (-\cos\alpha)\\
+\end{align*}
+However, $P_n(-x) = (-1)^nP_n(x)$, and so :
+\begin{align*}
+    V &= \frac{q}{4\pi\epsilon_0}\left(\frac{1}{r_+} - \frac{1}{r_-} \right) \\
+    &= \frac{q}{4\pi\epsilon_0R}\sum_{n=0}^{\infty}\left(\frac{d}{2R} \right)^n (P_n (\cos\alpha) - P_n(-\cos\alpha)) \\
+    V_{\text{quad}} &= 0 \\
+    V &= \frac{2q}{4\pi\epsilon_0}\sum_{n=1,3,5...}^{\infty}\left(\frac{d}{2R} \right)^n P_n (\cos\alpha)\\
+    V_{\text{oct}} &= \frac{q}{32\pi\epsilon_0}\frac{d^3}{R^4}(5\cos^3\theta - 3\cos\theta)
+\end{align*}
+
+\bigskip
+
+\subsection*{Problem 5.34}
+We have :
+\begin{align*}
+    \textbf{B} &= \frac{\mu_0m}{4\pi r^3}(2\cos\theta \hat{\textbf{r}} + \sin\theta \hat{\boldsymbol{\theta}})
+\end{align*}
+Now, $m\cos\theta\hat{\textbf{r}} = \textbf{m}\cdot\hat{\textbf{r}}\hat{\textbf{r}}$ and $m\sin\theta\hat{\boldsymbol{\theta}} = -\textbf{m}\cdot\hat{\boldsymbol{\theta}}\hat{\boldsymbol{\theta}}$ for some vector \textbf{m}. Then, \textbf{m} = $\textbf{m}\cdot\hat{\textbf{r}}\hat{\textbf{r}} + \textbf{m}\cdot\hat{\boldsymbol{\theta}}\hat{\boldsymbol{\theta}}$  Then, we have:
+\begin{align*}
+    3\textbf{m}\cdot\hat{\textbf{r}}\hat{\textbf{r}} - \textbf{m}
+ &= 3mr\cos\theta\hat{\textbf{r}}  - mr\cos\theta\hat{\textbf{r} + m\sin\theta\hat{\boldsymbol{\theta}}}\\
+ &= 2\cos\theta \hat{\textbf{r}} + \sin\theta \hat{\boldsymbol{\theta}}\\
+ \textbf{B} &= \frac{\mu_0m}{4\pi r^3}(2\cos\theta \hat{\textbf{r}} + \sin\theta \hat{\boldsymbol{\theta}})
+\end{align*}
+
+\bigskip
+
+\hrule
+\end{document}

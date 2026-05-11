@@ -1,0 +1,56 @@
+% Sneha Vireshwar Dixit <sdixit2@huskers.unl.edu>, July 2023
+
+\mode<presentation>
+
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{subsection in toc}[circle]
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{enumerate item}[default]
+
+
+
+\defbeamertemplate*{title page}{Lincoln}
+{
+  \vspace*{-0.02\paperheight}
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.02\paperheight,dp=1.125ex]{accent palette}{
+  \hspace*{1em}
+  \begin{parbox}{\paperwidth}{\usebeamerfont{title}{\inserttitle}\vspace{0.5em}\\
+    \ifx\insertsubtitle\@empty
+    \else
+    \usebeamerfont{subtitle}\insertsubtitle\vspace*{1em}\\
+    \fi  
+    \usebeamerfont{date}{\insertdate}\vspace*{2em}\\  
+  \usebeamerfont{author}{\insertauthor}\\ 
+  {\insertinstitute}\\
+  }\end{parbox}
+  \begin{flushright}
+    \vspace*{-5em}
+    \inserttitlegraphic\hspace{2em}\vspace*{2em}\\
+    \end{flushright}  
+  }\end{beamercolorbox}
+  
+}
+
+\defbeamertemplate*{section page}{Lincoln}
+{
+  \centering
+  \begin{beamercolorbox}[center]{structure}{
+  \usebeamerfont{section title}{\insertsection}
+}\end{beamercolorbox}
+}
+
+\defbeamertemplate*{subsection page}{Lincoln}
+{
+  \centering
+  \begin{beamercolorbox}[center]{structure}{
+  \usebeamerfont{section title}{\insertsubsection}
+}\end{beamercolorbox}
+}
+
+
+
+
+
+\mode
+<all>
