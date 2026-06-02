@@ -15,36 +15,14 @@
     </head>
 
 
-    <!--MAIN > WINDOWFRAME (+TITLE+NAVICONS) > CONTENT-->
 <body>
-    <!---LEFT SIDEBAR-->
-    <div class="sidebar-left">
-        <div class="windowframe">
-            <div class="windowtitle">
-                <img src="./assets/Icons/My Pictures.png">
-                Menu
-            </div>
-            <div class="content">
-                <img src="./assets/Logo/CMS_logo-002.png">
-                <div class="nav">
-                    <a href="./index.html"><div class="button">Home</div></a>
-                    <a href="./research.html"><div class="button">Research</div></a>
-                    <a href="./service.html"><div class="button">Teaching/Service</div></a>
-                    <a href="./resources.html"><div class="button">Resources</div></a>
-                    <a href="./gallery.html"><div class="button">Gallery</div></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!--SCROLLING CONTENT-->
-    <div class="scrolling">
+    <div id="scrolling">
         <div class="windowframe">
             <div class="windowtitle">
                 <img src="./assets/Icons/Command Prompt.png">
                 Resources : Sneha Vireshwar Dixit
-                <div class="navicons"><img src="./assets/Icons/Minimize.png"><img src="./assets/Icons/Maximize.png"><img src="./assets/Icons/Exit.png"></div>
             </div>
             <div class="content">
                 <h2>Resources</h2>
@@ -59,7 +37,6 @@
             <div class="windowtitle">
                 <img src="./assets/Icons/Document Search.png">
                 Grant Proposals
-                <div class="navicons"><img src="./assets/Icons/Minimize.png"><img src="./assets/Icons/Maximize.png"><img src="./assets/Icons/Exit.png"></div>
             </div>
             <div class="content">
                 <h3>Grant Writing Resources</h3>
@@ -84,7 +61,6 @@
             <div class="windowtitle">
                 <img src="./assets/Icons/Charmap.png">
                 LaTeX and Beamer
-                <div class="navicons"><img src="./assets/Icons/Minimize.png"><img src="./assets/Icons/Maximize.png"><img src="./assets/Icons/Exit.png"></div>
             </div>
             <div class="content">
                 <h3>My LaTeX Templates</h3>
@@ -115,7 +91,6 @@
             <div class="windowtitle">
                 <img src="./assets/Icons/Network and Internet.png">
                 Applying to graduate school
-                <div class="navicons"><img src="./assets/Icons/Minimize.png"><img src="./assets/Icons/Maximize.png"><img src="./assets/Icons/Exit.png"></div>
             </div>
             <div class="content">
                 <h3>Graduate School Tracker</h3>
@@ -129,8 +104,29 @@
 
     </div>
 
+     <!---LEFT SIDEBAR-->
+    <div id="sidebar-left">
+        <div class="windowframe">
+            <div class="windowtitle">
+                <img src="./assets/Icons/My Pictures.png">
+                Menu
+            </div>
+            <div class="content">
+                <img src="./assets/Logo/CMS_logo-002.png">
+                <div class="nav">
+                    <a href="./index.html"><div class="button">Home</div></a>
+                    <a href="./research.html"><div class="button">Research</div></a>
+                    <a href="./service.html"><div class="button">Teaching/Service</div></a>
+                    <a href="./resources.html"><div class="button">Resources</div></a>
+                    <a href="./gallery.html"><div class="button">Gallery</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!---RIGHT SIDEBAR-->
-    <div class="sidebar-right">
+    <div id="sidebar-right">
         <div class="windowframe">
             <div class="windowtitle">
                 <img src="./assets/Icons/Phone.png">
